@@ -47,13 +47,16 @@
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'steppenwolf' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
+			<div class="fullscreen-menu">
+        <?php
+        wp_nav_menu(
+          array(
+            'theme_location' => 'header',
+            'menu_id'        => 'header-menu',
+            'walker'          => new Primary_Walker_Nav_Menu()
+          )
+        );
+        ?>
+      </div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

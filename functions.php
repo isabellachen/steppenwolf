@@ -50,9 +50,18 @@ if ( ! function_exists( 'steppenwolf_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'steppenwolf' ),
+				'header' => esc_html__( 'Primary', 'steppenwolf' ),
 			)
 		);
+
+    class Primary_Walker_Nav_Menu extends Walker_Nav_Menu
+    {
+    function start_lvl(&$output, $depth = 0, $args = array())
+      {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<ul class=\"sub-menu level-$depth\" role=\"menu\">\n";
+      }
+    }
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -143,7 +152,7 @@ function steppenwolf_scripts() {
 	wp_enqueue_style( 'steppenwolf-style', get_stylesheet_uri(), array(), STEPPENWOLF_VERSION );
 	wp_style_add_data( 'steppenwolf-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'steppenwolf-navigation', get_template_directory_uri() . '/js/navigation.js', array(), STEPPENWOLF_VERSION, true );
+	wp_enqueue_script( 'steppenwolf-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), STEPPENWOLF_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
