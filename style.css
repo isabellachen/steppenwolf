@@ -626,15 +626,82 @@ textarea {
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
+.menu-toggle {
+	position: absolute;
+	z-index: 100;
+	right: 0;
+}
+
 .fullscreen-menu {
-	display: none;
+	transform: translateY(-100vh);
+	transition: all 400ms ease-in;
 	position: absolute;
 	top: 0;
 	left: 0;
+	background-color: lightblue;
+	width: 100%;
+	height: 100vh;
+	z-index: 90;
 }
 
 .fullscreen-menu.toggled {
+	transform: translateY(0vh);
 	display: block;
+}
+
+.main-navigation ul,
+.main-navigation li {
+	list-style: none;
+}
+
+.main-navigation .menu {
+	margin: 1rem;
+	padding: 0.5rem;
+}
+
+.main-navigation .sub-menu {
+	margin: 0;
+	padding: 0.5rem 1rem;
+	background-color: lightpink;
+}
+
+/* Hamburger */
+/*
+ * Hamburger button
+*/
+.menu-toggle {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	z-index: 10;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 5px;
+	border-radius: 2px;
+	background-color: #ffffff;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-10px, -8px);
 }
 
 /* Header

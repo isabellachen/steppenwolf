@@ -46,7 +46,11 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'steppenwolf' ); ?></button>
+      <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </button>
 			<div class="fullscreen-menu">
         <?php
         wp_nav_menu(
