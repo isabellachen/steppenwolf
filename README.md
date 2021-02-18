@@ -11,7 +11,7 @@ Activate the theme
 
 ### Requirements
 
-`_s` requires the following dependencies:
+Steppenwolf requires the following dependencies:
 
 - [Node.js](https://nodejs.org/)
 - [Composer](https://getcomposer.org/)
