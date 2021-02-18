@@ -2,7 +2,6 @@
 
 A self-critical WP theme that is mostly an empty shell.
 Acutally it's a menu bar and footer, ready for a page builder.
-The theme author prefers Beaver Builder as its less likely to get in her way.
 
 ## Installation
 
