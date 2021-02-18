@@ -6,7 +6,12 @@
 
 .menu-content {
   position: relative;
-  top: 60px;
+  top: 10px;
+
+  img {
+    height: 60px;
+    width: auto;
+  }
 }
 
 .fullscreen-menu {

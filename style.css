@@ -634,7 +634,12 @@ textarea {
 
 .menu-content {
   position: relative;
-  top: 60px;
+  top: 10px;
+}
+
+.menu-content img {
+  height: 60px;
+  width: auto;
 }
 
 .fullscreen-menu {
@@ -700,7 +705,7 @@ textarea {
   width: 35px;
   height: 5px;
   border-radius: 2px;
-  background-color: #ffffff;
+  background-color: #000000;
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -725,6 +730,11 @@ textarea {
   position: relative;
   display: flex;
   justify-content: space-between;
+}
+
+.site-branding img {
+  width: auto;
+  height: 60px;
 }
 
 /* Posts and pages

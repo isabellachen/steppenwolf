@@ -53,6 +53,7 @@
       </button>
 			<div class="fullscreen-menu">
         <div class="menu-content">
+          <?php the_custom_logo(); ?>
           <?php get_search_form(); ?>
           <?php
             wp_nav_menu(
