@@ -9,6 +9,8 @@
   const siteNavigation = document.getElementById('site-navigation');
   const $hamburger = $('.menu-toggle');
   const $fullscreenMenu = $('.fullscreen-menu');
+  const $topLevelMenuItem = $('ul.menu > li');
+  const $topLevelSubMenu = $('.level-0');
 
   if (!siteNavigation) {
     return;
@@ -25,6 +27,10 @@
   $hamburger.click(() => {
     $fullscreenMenu.toggleClass('toggled');
     $hamburger.toggleClass('change');
+  });
+
+  $topLevelMenuItem.click(function () {
+    $(this).find('.level-0').toggleClass('open');
   });
 })(jQuery);
 

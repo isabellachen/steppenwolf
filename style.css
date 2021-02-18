@@ -632,6 +632,11 @@ textarea {
   right: 0;
 }
 
+.menu-content {
+  position: relative;
+  top: 60px;
+}
+
 .fullscreen-menu {
   transform: translateY(-100vh);
   transition: all 400ms ease-in;
@@ -661,8 +666,19 @@ textarea {
 
 .main-navigation .sub-menu {
   margin: 0;
-  padding: 0.5rem 1rem;
+  padding: 0;
   background-color: lightpink;
+}
+
+.main-navigation .level-0 {
+  max-height: 0;
+  transition: max-height 0.15s ease-out;
+  overflow: hidden;
+}
+
+.main-navigation .level-0.open {
+  max-height: 500px;
+  transition: max-height 0.25s ease-in;
 }
 
 /* Hamburger */

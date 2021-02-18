@@ -52,15 +52,18 @@
         <div class="bar3"></div>
       </button>
 			<div class="fullscreen-menu">
-        <?php
-        wp_nav_menu(
-          array(
-            'theme_location' => 'header',
-            'menu_id'        => 'header-menu',
-            'walker'          => new Primary_Walker_Nav_Menu()
-          )
-        );
-        ?>
+        <div class="menu-content">
+          <?php get_search_form(); ?>
+          <?php
+            wp_nav_menu(
+              array(
+                'theme_location' => 'header',
+                'menu_id'        => 'header-menu',
+                'walker'          => new Primary_Walker_Nav_Menu()
+              )
+            );
+          ?>
+        </div>
       </div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
