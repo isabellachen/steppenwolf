@@ -14,6 +14,10 @@
   }
 }
 
+.menu_content-container {
+  margin: 0 0.25rem;
+}
+
 .fullscreen-menu {
   transform: translateY(-100vh);
   transition: all 400ms ease-in;
@@ -64,5 +68,14 @@
       max-height: 500px;
       transition: max-height 0.25s ease-in;
     }
+  }
+
+  .menu-extra_content {
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+
+  .menu-extra_content-inner {
+    background-color: lightpink;
   }
 }

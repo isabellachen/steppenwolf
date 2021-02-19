@@ -57,15 +57,20 @@
             <?php the_custom_logo(); ?>
             <?php get_search_form(); ?>
           </div>
-          <?php
-            wp_nav_menu(
-              array(
-                'theme_location' => 'header',
-                'menu_id'        => 'header-menu',
-                'walker'          => new Primary_Walker_Nav_Menu()
-              )
-            );
-          ?>
+          <div class="menu-content_container">
+            <?php
+              wp_nav_menu(
+                array(
+                  'theme_location' => 'header',
+                  'menu_id'        => 'header-menu',
+                  'walker'          => new Primary_Walker_Nav_Menu()
+                )
+              );
+            ?>
+            <div class="menu-extra_content">
+              <div class="menu-extra_content-inner">Extra Content</div>
+            </div>
+          </div>
         </div>
       </div>
 		</nav><!-- #site-navigation -->
