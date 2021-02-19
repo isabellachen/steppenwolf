@@ -48,7 +48,8 @@
     background-color: lightpink;
   }
 
-  .level-0 {
+  .level-0,
+  .level-1 {
     max-height: 0;
     transition: max-height 0.15s ease-out;
     overflow: hidden;

@@ -675,13 +675,15 @@ textarea {
   background-color: lightpink;
 }
 
-.main-navigation .level-0 {
+.main-navigation .level-0,
+.main-navigation .level-1 {
   max-height: 0;
   transition: max-height 0.15s ease-out;
   overflow: hidden;
 }
 
-.main-navigation .level-0.open {
+.main-navigation .level-0.open,
+.main-navigation .level-1.open {
   max-height: 500px;
   transition: max-height 0.25s ease-in;
 }

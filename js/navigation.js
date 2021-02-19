@@ -11,6 +11,8 @@
   const $fullscreenMenu = $('.fullscreen-menu');
   const $topLevelMenuItem = $('ul.menu > li');
   const $topLevelSubMenu = $('.level-0'); //The first level under the top level
+  const $secondLevelMenuItem = $('ul.level-0 > li');
+  const $secondLevelSubMenu = $('.level-1');
 
   if (!siteNavigation) {
     return;
@@ -30,9 +32,12 @@
   });
 
   $topLevelMenuItem.click(function () {
-    if ($topLevelSubMenu.hasClass('open')) {
-      $topLevelSubMenu.removeClass('open');
-    }
-    $(this).find('.level-0').toggleClass('open');
+    const self = this; // the parent li that is clicked, e.g. About Us
+    const target = $(self).find('.level-0'); // the ul submenu under the li e.g. About Us > Our Story
+    target.toggleClass('open'); // open and close the submenu of the clicked parent li
+
+    $topLevelSubMenu.not(target).each(function () {
+      $(this).removeClass('open'); // close all other submenus
+    });
   });
 })(jQuery);
