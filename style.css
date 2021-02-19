@@ -48,6 +48,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+/*
+ * SCREEN SIZES
+*/
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -692,6 +695,34 @@ textarea {
 .main-navigation .level-1.open {
   max-height: 500px;
   transition: max-height 0.25s ease-in;
+}
+
+/*
+ * SCREEN SIZES
+*/
+@media (min-width: 1024px) {
+  .main-navigation .fullscreen-menu {
+    background-color: lightsteelblue;
+  }
+  .main-navigation .menu-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-navigation .menu {
+    display: flex;
+  }
+  .main-navigation .menu > li {
+    flex: 1;
+    margin-right: 0.75rem;
+  }
+  .main-navigation .search-form {
+    position: relative;
+    right: 70px;
+  }
+  .main-navigation .level-0,
+  .main-navigation .level-1 {
+    max-height: 500px;
+  }
 }
 
 /* Hamburger */

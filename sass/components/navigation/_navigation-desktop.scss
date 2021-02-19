@@ -1,0 +1,33 @@
+@import '../../abstracts/abstracts';
+
+@media (min-width: $screen-size-l) {
+  .main-navigation {
+    .fullscreen-menu {
+      background-color: lightsteelblue;
+    }
+
+    .menu-header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .menu {
+      display: flex;
+    }
+
+    .menu > li {
+      flex: 1;
+      margin-right: 0.75rem;
+    }
+
+    .search-form {
+      position: relative;
+      right: 70px;
+    }
+
+    .level-0,
+    .level-1 {
+      max-height: 500px;
+    }
+  }
+}
