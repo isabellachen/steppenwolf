@@ -1,12 +1,15 @@
+@import '../../abstracts/abstracts';
+
 .menu-toggle {
   position: absolute;
   z-index: 100;
   right: 0;
+  top: 1.5rem;
 }
 
 .menu-content {
   position: relative;
-  top: 10px;
+  top: 1.6rem;
 
   img {
     height: 60px;
@@ -42,20 +45,38 @@
   }
 
   li {
-    padding: 1rem 0;
-    margin-bottom: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.5);
   }
 
   .menu {
-    margin: 1rem;
-    padding: 0.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu > li > a {
+    padding: 0.5rem 1rem 0.5rem $left-spacer;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: $font__header;
+    display: block;
+    border-bottom: 1px solid #ffffff;
   }
 
   .sub-menu {
     margin: 0;
     padding: 0;
     background-color: lightpink;
+  }
+
+  .search-form {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 0.5rem 0;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .search-icon {
+    margin-right: 1.4rem;
   }
 
   .level-0,
@@ -70,12 +91,11 @@
     }
   }
 
-  .menu-extra_content {
-    margin: 1rem;
-    padding: 0.5rem;
-  }
-
   .menu-extra_content-inner {
     background-color: lightpink;
+  }
+
+  .custom-logo-link {
+    margin-left: $left-spacer;
   }
 }
