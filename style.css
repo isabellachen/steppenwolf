@@ -664,6 +664,12 @@ textarea {
   list-style: none;
 }
 
+.main-navigation li {
+  padding: 1rem 0;
+  margin-bottom: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 .main-navigation .menu {
   margin: 1rem;
   padding: 0.5rem;
