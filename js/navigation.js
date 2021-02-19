@@ -29,6 +29,10 @@
   $hamburger.click(() => {
     $fullscreenMenu.toggleClass('toggled');
     $hamburger.toggleClass('change');
+
+    // close all submenus when the hamburger is closed
+    $topLevelSubMenu.removeClass('open');
+    $secondLevelSubMenu.removeClass('open');
   });
 
   $topLevelMenuItem.on('click', function (event) {
