@@ -9,10 +9,16 @@
   const siteNavigation = document.getElementById('site-navigation');
   const $hamburger = $('.menu-toggle');
   const $fullscreenMenu = $('.fullscreen-menu');
-  const $topLevelMenuItem = $('ul.menu > li > a');
+  const $topLevelMenuItem = $('ul.menu > li > a'); // select the a element because of a styling quirk - the border bottom
   const $topLevelSubMenu = $('.level-0'); //The first level under the top level
-  const $secondLevelMenuItem = $('ul.level-0 > li');
+  const $secondLevelMenuItem = $('ul.level-0 > li'); //no need to select the a element because the border was applied to the submenu
   const $secondLevelSubMenu = $('.level-1');
+  const $fistLevelMenuItemHasChildren = $(
+    '.menu > .menu-item-has-children > a'
+  );
+  const $secondLevelMenuItemHasChildren = $(
+    '.level-0 > .menu-item-has-children'
+  );
 
   if (!siteNavigation) {
     return;
@@ -44,6 +50,7 @@
     $(this).parent().find('.level-1').removeClass('open'); //the sub-submenus are always closed when openining a top level menu
     target.toggleClass('open'); // open and close the submenu of the clicked parent li
     $topLevelSubMenu.not(target).each(function () {
+      // if the .level-0 ul is not the ul that is the child for the clicked a element
       $(this).removeClass('open'); // close all other submenus
       $(this).find('.level-1').removeClass('open'); // close the sub-submenus
     });
@@ -56,6 +63,26 @@
 
     $secondLevelSubMenu.not(target).each(function () {
       $(this).removeClass('open'); // close all other submenus
+    });
+  });
+
+  $fistLevelMenuItemHasChildren.click(function () {
+    const self = this;
+    const target = $(self).parent();
+    target.toggleClass('chevron-up');
+
+    $fistLevelMenuItemHasChildren.not($(self)).each(function () {
+      $(this).parent().removeClass('chevron-up');
+      $secondLevelMenuItemHasChildren.removeClass('chevron-up'); //rotate the chevrons of all submenus to point down
+    });
+  });
+
+  $secondLevelMenuItemHasChildren.click(function () {
+    const self = this;
+    $(self).toggleClass('chevron-up');
+
+    $secondLevelMenuItemHasChildren.not($(self)).each(function () {
+      $(this).removeClass('chevron-up');
     });
   });
 })(jQuery);

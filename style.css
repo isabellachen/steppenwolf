@@ -771,6 +771,11 @@ input[type='search'] {
   position: absolute;
   top: 10px;
   right: 10px;
+  height: 23px;
+}
+
+.main-navigation .menu-item-has-children.chevron-up:before {
+  transform: rotate(180deg);
 }
 
 /*
