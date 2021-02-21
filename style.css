@@ -696,6 +696,7 @@ input[type='search'] {
 .main-navigation .menu {
   margin: 0;
   padding: 0;
+  font-size: 1.125rem;
 }
 
 .main-navigation .menu > li > a {
@@ -712,6 +713,11 @@ input[type='search'] {
   margin: 0;
   padding: 0;
   background-color: lightpink;
+}
+
+.main-navigation .sub-menu > li > a {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  display: block;
 }
 
 .main-navigation .search-form {

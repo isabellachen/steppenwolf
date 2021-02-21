@@ -9,7 +9,7 @@
   const siteNavigation = document.getElementById('site-navigation');
   const $hamburger = $('.menu-toggle');
   const $fullscreenMenu = $('.fullscreen-menu');
-  const $topLevelMenuItem = $('ul.menu > li');
+  const $topLevelMenuItem = $('ul.menu > li > a');
   const $topLevelSubMenu = $('.level-0'); //The first level under the top level
   const $secondLevelMenuItem = $('ul.level-0 > li');
   const $secondLevelSubMenu = $('.level-1');
@@ -40,8 +40,8 @@
       return;
     }
     const self = this; // the parent li that is clicked, e.g. About Us
-    const target = $(self).find('.level-0'); // the ul submenu under the li e.g. About Us > Our Story
-    $(this).find('.level-1').removeClass('open'); //the sub-submenus are always closed when openining a top level menu
+    const target = $(self).parent().find('.level-0'); // the ul submenu under the li e.g. About Us > Our Story
+    $(this).parent().find('.level-1').removeClass('open'); //the sub-submenus are always closed when openining a top level menu
     target.toggleClass('open'); // open and close the submenu of the clicked parent li
     $topLevelSubMenu.not(target).each(function () {
       $(this).removeClass('open'); // close all other submenus
