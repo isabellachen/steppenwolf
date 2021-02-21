@@ -61,6 +61,8 @@
     font-family: $font__header;
     display: block;
     border-bottom: 1px solid #ffffff;
+    position: relative;
+    z-index: 10;
   }
 
   .sub-menu {
@@ -97,11 +99,32 @@
     }
   }
 
+  .level-1 {
+    border-top: 1px solid #ffffff;
+
+    &.open {
+      border-bottom: 1px solid #ffffff;
+    }
+  }
+
   .menu-extra_content-inner {
     background-color: lightpink;
   }
 
   .custom-logo-link {
     margin-left: $left-spacer;
+  }
+
+  .menu-item {
+    position: relative;
+  }
+
+  .menu-item-has-children {
+    &:before {
+      content: url('./assets/icons/chevron-down.svg');
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
   }
 }
