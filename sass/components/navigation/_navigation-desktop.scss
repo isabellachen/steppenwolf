@@ -4,11 +4,31 @@
   .main-navigation {
     .fullscreen-menu {
       background-color: lightsteelblue;
+      overflow: hidden;
+    }
+
+    .custom-logo-link {
+      margin-left: 0rem;
+    }
+
+    .search-icon {
+      margin-right: 0;
+    }
+
+    .search-form {
+      width: 500px;
+      margin-right: 60px;
     }
 
     .menu-header {
       display: flex;
       justify-content: space-between;
+      margin: 0 5rem;
+    }
+
+    .menu-toggle {
+      top: 40px;
+      right: 70px;
     }
 
     .menu {
@@ -22,17 +42,48 @@
 
     .search-form {
       position: relative;
-      right: 70px;
     }
 
     .level-0,
     .level-1 {
       max-height: 500px;
     }
+
+    .menu > li > a {
+      padding: 0;
+      border-bottom: none;
+      font-size: 1.7rem;
+      padding-bottom: 0.75rem;
+    }
+
+    .sub-menu > li > a {
+      padding: 0;
+    }
+
+    .level-1 {
+      border-top: none;
+
+      &.open {
+        border-bottom: none;
+      }
+    }
+
+    .menu-item {
+      li {
+        font-size: 1.4rem;
+        padding: 0.25rem 0;
+      }
+    }
+
+    .menu-item-has-children {
+      &:before {
+        content: '';
+      }
+    }
   }
 
   .menu-content_container {
     max-width: $width-xl;
-    margin: auto;
+    margin: 3rem auto 0;
   }
 }

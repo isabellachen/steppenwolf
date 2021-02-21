@@ -1,12 +1,24 @@
+@import '../../abstracts/abstracts';
+
 .site-header {
   position: relative;
   display: flex;
   justify-content: space-between;
 }
 
+.site-branding_header {
+  margin: 1rem;
+}
+
 .site-branding {
   img {
     width: auto;
     height: 60px;
+  }
+}
+
+@media (min-width: $screen-size-l) {
+  .site-branding_header {
+    margin: 1.6rem 5rem 0;
   }
 }

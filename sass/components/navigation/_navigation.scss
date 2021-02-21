@@ -9,7 +9,7 @@
 
 .menu-content {
   position: relative;
-  top: 1.6rem;
+  margin-top: 1.6rem;
 
   img {
     height: 60px;
@@ -131,6 +131,14 @@
     &.chevron-up {
       &:before {
         transform: rotate(180deg);
+      }
+    }
+  }
+
+  .menu-item {
+    li {
+      a {
+        text-decoration: none;
       }
     }
   }
