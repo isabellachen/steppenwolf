@@ -17,12 +17,25 @@ Steppenwolf requires the following dependencies:
 
 ### Setup
 
-You need to install the necessary Node.js and Composer dependencies :
+You need to install the necessary Node.js and Composer dependencies.
 
 ```sh
 $ composer install
 $ npm install
 ```
+
+### Menu Bars
+
+#### Header/Primary Menu
+
+- Create the main menu "Header Menu"
+- Set Theme Location "Primary" to "Header Menu" in Appearance > Menus > Manage Locaitons
+
+#### Social Menu
+
+- Create a new menu called "Social Menu"
+- Set Theme Location "Social" to "Social Menu" in Appearance > Menus > Manage Locaitons
+- Add custom links. You can call the Navigation label whatever you want. Steppenwolf uses the URL to deduce the social site and display the appropriate icon using font-awesome
 
 ### Available CLI commands
 

@@ -90,27 +90,27 @@ if ( ! function_exists( 'steppenwolf_setup' ) ) :
         $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
         $item_output = $args->before;
             if (strpos($item->url, 'facebook') !== false) {
-                $item_output .= '<a'. $attributes .'><i class="fab fa-facebook-f"></i>';
+                $item_output .= '<a'. $attributes .'><i class="fab fa fa-facebook-f"></i>';
                 $item_output .= '</a>';
                 $item_output .= $args->after;
             } elseif (strpos($item->url, 'twitter') !== false)  {
-                $item_output .= '<a'. $attributes .'><i class="fab fa-twitter">';
+                $item_output .= '<a'. $attributes .'><i class="fab fa fa-twitter">';
                 $item_output .= '</i></a>';
                 $item_output .= $args->after;
             } elseif (strpos($item->url, 'instagram') !== false)  {
-                $item_output .= '<a'. $attributes .'><i class="fab fa-instagram">';
+                $item_output .= '<a'. $attributes .'><i class="fab fa fa-instagram">';
                 $item_output .= '</i></a>';
                 $item_output .= $args->after;
             } elseif (strpos($item->url, 'youtube') !== false)  {
-                $item_output .= '<a'. $attributes .'><i class="fab fa-youtube-play">';
+                $item_output .= '<a'. $attributes .'><i class="fab fa fa-youtube-play">';
                 $item_output .= '</i></a>';
                 $item_output .= $args->after;
             }  elseif (strpos($item->url, 'snapchat') !== false)  {
-                $item_output .= '<a'. $attributes .'><i class="fab fa-snapchat">';
+                $item_output .= '<a'. $attributes .'><i class="fab fa fa-snapchat">';
                 $item_output .= '</i></a>';
                 $item_output .= $args->after;
             } elseif (strpos($item->url, 'vimeo') !== false)  {
-                $item_output .= '<a'. $attributes .'><i class="fab fa-vimeo-v">';
+                $item_output .= '<a'. $attributes .'><i class="fab fa fa-vimeo-v">';
                 $item_output .= '</i></a>';
                 $item_output .= $args->after;
             } 
@@ -219,6 +219,7 @@ function steppenwolf_scripts() {
 	wp_enqueue_style( 'din-font', "https://use.typekit.net/vmm5oll.css", array(), null );
 
 	wp_enqueue_script( 'steppenwolf-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), STEPPENWOLF_VERSION, true );
+	wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/2994bf75c1.js', array(), null, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
