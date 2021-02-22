@@ -80,7 +80,11 @@
         content: '';
       }
     }
-  }
+
+    .level-0 > .menu-item-has-children {
+      border-top: none;
+    }
+  } //.main-navigation
 
   .menu-content_container {
     max-width: $width-xl;

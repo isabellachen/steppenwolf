@@ -108,6 +108,7 @@
   }
 
   .menu-extra_content-inner {
+    padding: 0.5rem 1rem 0.5rem $left-spacer;
     background-color: lightpink;
   }
 
@@ -141,5 +142,13 @@
         text-decoration: none;
       }
     }
+  }
+
+  .level-0 > .menu-item-has-children {
+    border-top: 1px solid #ffffff;
+  }
+
+  .level-0 > .menu-item-has-children ~ .menu-item-has-children {
+    border-top: none;
   }
 }
