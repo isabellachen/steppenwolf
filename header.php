@@ -66,12 +66,22 @@
                 array(
                   'theme_location' => 'header',
                   'menu_id'        => 'header-menu',
-                  'walker'          => new Primary_Walker_Nav_Menu()
+                  'walker'         => new Primary_Walker_Nav_Menu()
                 )
               );
             ?>
             <div class="menu-extra_content">
-              <div class="menu-extra_content-inner">Extra Content</div>
+              <div class="menu-extra_content-inner">
+                <?php
+                  wp_nav_menu(
+                    array(
+                      'theme_location' => 'social',
+                      'menu_id'        => 'social-menu',
+                      'walker' => new WO_Nav_Social_Walker()
+                    )
+                  );
+                ?>
+              </div>
             </div>
           </div>
         </div>
