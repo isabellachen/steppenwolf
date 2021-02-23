@@ -108,7 +108,8 @@
   }
 
   .menu-extra_content-inner {
-    padding: 0.5rem 1rem 0.5rem $left-spacer;
+    border-top: 1px solid #ffffff;
+    padding: 1.25rem 1rem 1.25rem $left-spacer;
     background-color: lightpink;
   }
 
@@ -150,5 +151,13 @@
 
   .level-0 > .menu-item-has-children ~ .menu-item-has-children {
     border-top: none;
+  }
+
+  #social-menu {
+    .fa {
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-right: 1rem;
+    }
   }
 }
