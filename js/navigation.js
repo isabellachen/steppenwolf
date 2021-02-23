@@ -85,4 +85,17 @@
       $(this).removeClass('chevron-up');
     });
   });
+
+  const $searchForm = $('#searchform');
+  const $searchField = $('#search');
+  const $searchButton = $('.search-icon');
+  $searchForm.submit(function (event) {
+    if ($searchField.val() === '') {
+      event.preventDefault();
+    }
+  });
+  $searchButton.on('click', function (event) {
+    // $searchField.toggleClass('opened');
+    $searchForm.toggleClass('opened');
+  });
 })(jQuery);

@@ -47,6 +47,7 @@ input[type='email'] {
 input[type='search'] {
   padding: 0 0 0 1rem;
   font-size: $left-spacer;
+  outline: none;
 }
 
 @media (min-width: $screen-size-l) {

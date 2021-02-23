@@ -637,6 +637,7 @@ input[type='email'] {
 input[type='search'] {
   padding: 0 0 0 1rem;
   font-size: 1rem;
+  outline: none;
 }
 
 @media (min-width: 1024px) {
@@ -736,7 +737,9 @@ input[type='search'] {
 }
 
 .main-navigation .search-icon {
-  margin-right: 1.4rem;
+  margin-right: 0.6rem;
+  height: 30px;
+  padding: 0.25rem;
 }
 
 .main-navigation .level-0,
@@ -937,9 +940,46 @@ input[type='search'] {
   height: 60px;
 }
 
+.desktop-secondary_menu {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   .site-branding_header {
     margin: 1.6rem 5rem 0;
+    background-color: lightseagreen;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .desktop-secondary_menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 60px;
+  }
+  .desktop-secondary_menu .search-form {
+    height: 35px;
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    transition: all 0.15s ease-out;
+  }
+  .desktop-secondary_menu .search-form.opened {
+    border-color: white;
+  }
+  .desktop-secondary_menu .search-form.opened .search-field {
+    max-width: 300px;
+    opacity: 1;
+  }
+  .desktop-secondary_menu .search-icon {
+    padding: 0.25rem;
+    height: 30px;
+  }
+  .desktop-secondary_menu .search-field {
+    opacity: 0.1;
+    max-width: 0;
+    transition: all 0.15s ease-out;
+    width: 300px;
   }
 }
 

@@ -17,8 +17,51 @@
   }
 }
 
+.desktop-secondary_menu {
+  display: none;
+}
+
 @media (min-width: $screen-size-l) {
   .site-branding_header {
     margin: 1.6rem 5rem 0;
+    background-color: lightseagreen;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .desktop-secondary_menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 60px;
+
+    .search-form {
+      height: 35px;
+      display: flex;
+      border-bottom: 1px solid rgba(255, 255, 255, 0);
+      transition: all 0.15s ease-out;
+
+      &.opened {
+        border-color: rgba(255, 255, 255, 1);
+
+        .search-field {
+          max-width: 300px;
+          opacity: 1;
+        }
+      }
+    }
+
+    .search-icon {
+      padding: 0.25rem;
+      height: 30px;
+    }
+
+    .search-field {
+      opacity: 0.1;
+      max-width: 0;
+      transition: all 0.15s ease-out;
+      width: 300px;
+    }
   }
 }

@@ -45,6 +45,18 @@
           <p class="site-description"><?php echo $steppenwolf_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
         <?php endif; ?>
       </div><!-- .site-branding -->
+      <div class="desktop-secondary_menu">
+        <?php
+          wp_nav_menu(
+            array(
+              'theme_location' => 'social',
+              'menu_id'        => 'social-menu',
+              'walker' => new WO_Nav_Social_Walker()
+            )
+          );
+        ?>
+        <?php get_search_form(); ?>
+      </div>
       <!--Insert secondary menu here (login, social links)-->
     </div><!--.site-branding_header-->
 
