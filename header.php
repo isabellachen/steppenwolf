@@ -93,6 +93,9 @@
                     )
                   );
                 ?>
+                <?php if ( is_active_sidebar( 'menu_widget' ) ) : ?>
+                  <?php dynamic_sidebar( 'menu_widget' ); ?>
+                <?php endif; ?>
               </div>
             </div>
           </div>

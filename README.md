@@ -44,6 +44,7 @@ It displays the mailer subscription in the menu bar.
 
 - Install the [Sendin Blue WP plugin](https://wordpress.org/plugins/mailin/)
 - If you want reCaptcha, see [create reCaptcha on Google](https://help.sendinblue.com/hc/en-us/articles/208771869-Create-a-subscription-form-)
+- You can display the Sendin Blue Widget in the Menu Widget (menu_widget is activated in functions.php and displayed in header.php)
 
 ### Available CLI commands
 

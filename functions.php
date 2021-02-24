@@ -254,3 +254,22 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Widget for menu
+ */
+
+ function widget_init() {
+
+	register_sidebar( array(
+		'name'          => 'Menu widget',
+		'id'            => 'menu_widget',
+    'description'   => 'Widget area for menu',
+		'before_widget' => '<div class="menu-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'widget_init' );
+?>
