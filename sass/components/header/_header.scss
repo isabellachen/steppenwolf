@@ -17,14 +17,18 @@
   }
 }
 
+.site-title {
+  display: none;
+}
+
 .desktop-secondary_menu {
   display: none;
 }
 
 @media (min-width: $screen-size-l) {
   .site-branding_header {
-    margin: 1.6rem 5rem 0;
-    background-color: lightseagreen;
+    margin: 2.4rem 5rem 0;
+    background-color: #cdcdcd;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -62,6 +66,17 @@
       max-width: 0;
       transition: all 0.15s ease-out;
       width: 300px;
+    }
+
+    #social-menu {
+      margin: 0 0.75rem 0 0;
+      padding: 0;
+      color: #ffffff;
+
+      a {
+        font-size: 1.5rem;
+        margin-left: 0.75rem;
+      }
     }
   }
 }
