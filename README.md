@@ -37,6 +37,14 @@ $ npm install
 - Set Theme Location "Social" to "Social Menu" in Appearance > Menus > Manage Locaitons
 - Add custom links. You can call the Navigation label whatever you want. Steppenwolf uses the URL to deduce the social site and display the appropriate icon using font-awesome
 
+#### Plugins
+
+Steppenwolf has SendinBlue integration.
+It displays the mailer subscription in the menu bar.
+
+- Install the [Sendin Blue WP plugin](https://wordpress.org/plugins/mailin/)
+- If you want reCaptcha, see [create reCaptcha on Google](https://help.sendinblue.com/hc/en-us/articles/208771869-Create-a-subscription-form-)
+
 ### Available CLI commands
 
 - `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
