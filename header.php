@@ -97,9 +97,9 @@
                   <?php dynamic_sidebar( 'menu_widget' ); ?>
                 <?php endif; ?>
               </div>
-            </div>
-          </div>
         </div>
+          </div>
+        </div><!--.menu-content-->
       </div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

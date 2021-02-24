@@ -95,7 +95,6 @@
     }
   });
   $searchButton.on('click', function (event) {
-    // $searchField.toggleClass('opened');
     $searchForm.toggleClass('opened');
   });
 })(jQuery);

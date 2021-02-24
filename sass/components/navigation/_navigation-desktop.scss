@@ -88,7 +88,18 @@
     .menu-extra_content-inner {
       border-top: none;
     }
+
+    .menu-extra_content {
+      /*change these styles accordingly to place the menu widget*/
+      width: 24%;
+      position: relative;
+      top: -280px;
+    }
   } //.main-navigation
+
+  .menu-content {
+    display: block;
+  }
 
   .menu-content_container {
     max-width: $width-xl;
