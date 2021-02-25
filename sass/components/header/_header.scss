@@ -58,7 +58,7 @@
 
     .search-icon {
       padding: 0.25rem;
-      height: 30px;
+      height: 32px;
     }
 
     .search-field {
@@ -71,11 +71,14 @@
     #social-menu {
       margin: 0 0.75rem 0 0;
       padding: 0;
-      color: #ffffff;
 
       a {
         font-size: 1.5rem;
         margin-left: 0.75rem;
+        color: #000000;
+        &:hover {
+          color: #000000;
+        }
       }
     }
   }

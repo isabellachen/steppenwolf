@@ -744,7 +744,7 @@ input[type='search'] {
 
 .main-navigation .search-icon {
   margin-right: 0.6rem;
-  height: 30px;
+  height: 32px;
   padding: 0.25rem;
 }
 
@@ -843,6 +843,11 @@ input[type='search'] {
   .main-navigation .search-form {
     width: 500px;
     margin-right: 60px;
+    position: relative;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0.4rem;
   }
   .main-navigation .menu-header {
     display: flex;
@@ -859,9 +864,6 @@ input[type='search'] {
   .main-navigation .menu > li {
     flex: 1;
     margin-right: 0.75rem;
-  }
-  .main-navigation .search-form {
-    position: relative;
   }
   .main-navigation .level-0,
   .main-navigation .level-1 {
@@ -1005,7 +1007,7 @@ input[type='search'] {
   }
   .desktop-secondary_menu .search-icon {
     padding: 0.25rem;
-    height: 30px;
+    height: 32px;
   }
   .desktop-secondary_menu .search-field {
     opacity: 0.1;
@@ -1016,11 +1018,14 @@ input[type='search'] {
   .desktop-secondary_menu #social-menu {
     margin: 0 0.75rem 0 0;
     padding: 0;
-    color: #ffffff;
   }
   .desktop-secondary_menu #social-menu a {
     font-size: 1.5rem;
     margin-left: 0.75rem;
+    color: #000000;
+  }
+  .desktop-secondary_menu #social-menu a:hover {
+    color: #000000;
   }
 }
 
