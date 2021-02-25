@@ -52,6 +52,7 @@ if ( ! function_exists( 'steppenwolf_setup' ) ) :
 			array(
 				'header' => esc_html__( 'Primary', 'steppenwolf' ),
 				'social' => esc_html__( 'Social', 'steppenwolf' ),
+				'terms' => esc_html__( 'Terms', 'steppenwolf' ),
 			)
 		);
 
@@ -256,9 +257,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 /**
  * Widget for menu
+ * Used mainly to insert a sendinblue/mailchimp subscribe form in the fullscreen menu
  */
 
- function widget_init() {
+ function menu_widget_init() {
 
 	register_sidebar( array(
 		'name'          => 'Menu widget',
@@ -271,5 +273,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	) );
 
 }
-add_action( 'widgets_init', 'widget_init' );
-?>
+add_action( 'widgets_init', 'menu_widget_init' );
+
+/**
+ * Widget for Footer Right
+ * Used mainly to insert a contact form into the footer
+ */
+
+ function footer_right_widget() {
+
+	register_sidebar( array(
+		'name'          => 'Footer Right widget',
+		'id'            => 'footer_right_widget',
+    'description'   => 'Widget area for footer right',
+		'before_widget' => '<div class="footer_right-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'footer_right_widget' );

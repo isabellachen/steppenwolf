@@ -24,7 +24,7 @@ $ composer install
 $ npm install
 ```
 
-### Menu Bars
+### Menus
 
 #### Header/Primary Menu
 
@@ -37,14 +37,27 @@ $ npm install
 - Set Theme Location "Social" to "Social Menu" in Appearance > Menus > Manage Locaitons
 - Add custom links. You can call the Navigation label whatever you want. Steppenwolf uses the URL to deduce the social site and display the appropriate icon using font-awesome
 
-#### Plugins
+#### Terms Menu (for the footer)
 
-Steppenwolf has SendinBlue integration.
-It displays the mailer subscription in the menu bar.
+- Create a new menu called "Terms Menu"
+- Set Theme Location "Terms" to "Terms Menu" in Appearance > Menus > Manage Locaitons
+
+### Plugins
+
+#### Mailer Subscription
+
+You can display a 'Stay in Touch' form to get folks to sign up to your email list.
+You can use any mailer plugin, like SendinBlue or MailChimp.
+The area to display the sign-up form is in a widgetized area in the full screen menu.
 
 - Install the [Sendin Blue WP plugin](https://wordpress.org/plugins/mailin/)
 - If you want reCaptcha, see [create reCaptcha on Google](https://help.sendinblue.com/hc/en-us/articles/208771869-Create-a-subscription-form-)
 - You can display the Sendin Blue Widget in the Menu Widget (menu_widget is activated in functions.php and displayed in header.php)
+
+#### Contact Form 7
+
+You can use any contact form plugin you want.
+There is a widget area in the footer right for the contact form.
 
 ### Available CLI commands
 

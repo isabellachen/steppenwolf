@@ -12,19 +12,45 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
+    <div class="site-footer_main desktop-container">
+      <div class="site-footer_main-left">
+        <div class="site-footer_main-content">
+          <div class="site-footer_branding">
+            <div>logo</div>
+            <?php
+              wp_nav_menu(
+                array(
+                  'theme_location' => 'social',
+                  'menu_id'        => 'social-menu',
+                  'walker' => new WO_Nav_Social_Walker()
+                )
+              );
+            ?>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer_main-right">
+        <?php if ( is_active_sidebar( 'footer_right_widget' ) ) : ?>
+          <?php dynamic_sidebar( 'footer_right_widget' ); ?>
+        <?php endif; ?>
+      </div>
+    </div>
+		<div class="site-footer_terms desktop-container">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'steppenwolf' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'steppenwolf' ), 'WordPress' );
+				printf( esc_html__( '© %d %s', 'steppenwolf' ), date("Y"), 'SHOUT - SSH for Sustainable Innovation' );
 				?>
 			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'steppenwolf' ), 'steppenwolf', '<a href="https://isachen.com">isachen</a>' );
-				?>
-		</div><!-- .site-info -->
+      <?php
+        wp_nav_menu(
+          array(
+            'theme_location' => 'terms',
+            'menu_id'        => 'terms-menu',
+          )
+        );
+      ?>
+		</div><!-- .site-footer_terms -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

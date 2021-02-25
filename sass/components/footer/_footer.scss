@@ -1,0 +1,71 @@
+@import '../../abstracts/abstracts';
+
+.site-footer {
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    font-family: $font__header;
+  }
+
+  &_main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &_terms {
+    display: flex;
+    justify-content: space-between;
+    a {
+      margin-left: 0.5rem;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li:not(:last-child) {
+        &:after {
+          content: '|';
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  form {
+    input {
+      border: 1px solid #ffffff;
+    }
+
+    label,
+    span {
+      width: 100%;
+    }
+  }
+
+  #social-menu {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: $screen-size-l) {
+  .site-footer {
+    &_main {
+      flex-direction: row;
+    }
+
+    &_main-left {
+      flex: 1.5;
+    }
+
+    &_main-right {
+      flex: 1;
+    }
+  }
+}

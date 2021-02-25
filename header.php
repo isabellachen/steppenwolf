@@ -72,7 +72,7 @@
             <?php the_custom_logo(); ?>
             <?php get_search_form(); ?>
           </div>
-          <div class="menu-content_container">
+          <div class="menu-content_container desktop-container">
             <?php
               wp_nav_menu(
                 array(
